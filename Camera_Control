@@ -3,7 +3,7 @@
 import cv2
 
 # Ouvrir la caméra
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) # 0 pour la 1ere caméra, 1 pour la 2e...
 
 # Vérifier si la caméra est ouverte
 if not cap.isOpened():
