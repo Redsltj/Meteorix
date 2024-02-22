@@ -7,3 +7,4 @@ The group is as follow :
    Alissia
    Rouge
 We are working on distributing the roles at the moment. 
+The files Camera_Control is ours, created in 2024 at the same time as this repository; the others are the previous group's work.
