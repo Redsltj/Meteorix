@@ -1,7 +1,6 @@
 # this is the code used to control shutter speed and gain of the ground camera (written by ChatGPT; don't forget to test)
 
 import cv2
-#shutter speed control :
 
 # Ouvrir la caméra
 cap = cv2.VideoCapture(0)
@@ -12,16 +11,16 @@ if not cap.isOpened():
     exit()
 
 # Lire et afficher les propriétés actuelles de la caméra
-gain = cap.get(cv2.CAP_PROP_GAIN)
-print("Gain actuel:", gain)
+exposure_time = cap.get(cv2.CAP_PROP_EXPOSURE)
+print("Temps d'exposition actuel:", exposure_time)
 
-# Définir un nouveau gain
-new_gain = 1.0  # Valeur du gain à définir (peut varier selon la caméra)
-cap.set(cv2.CAP_PROP_GAIN, new_gain)
+# Définir un nouveau temps d'exposition (en millisecondes)
+new_exposure_time = 10
+cap.set(cv2.CAP_PROP_EXPOSURE, new_exposure_time)
 
 # Lire et afficher les nouvelles propriétés de la caméra
-gain = cap.get(cv2.CAP_PROP_GAIN)
-print("Nouveau gain:", gain)
+exposure_time = cap.get(cv2.CAP_PROP_EXPOSURE)
+print("Nouveau temps d'exposition:", exposure_time)
 
 # Fermer la caméra
 cap.release()
